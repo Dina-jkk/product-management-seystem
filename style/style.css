@@ -1,0 +1,15 @@
+.form-control{
+    border: none;
+    border-bottom:solid 1px gray;
+ 
+
+}
+.form-control:focus{
+box-shadow: none;
+ 
+
+
+}
+textarea {
+    resize:none;
+}

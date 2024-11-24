@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manegment system</title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+    
+</head>
+<body >
+
+<div class="container ">
+
+   <div class="w-75 mx-auto">
+    <h1     style="width: 70%;  margin:auto;"     class=" text-success   bg-warning text-center  rounded-pill py-3    fw-border  my-5 text-center"> product manegment system</h1>
+
+    <div class="form-floating mb-3">
+        <input   oninput="productNameValidation()"     type="text" class="form-control" id="productName" placeholder="Product Name">
+        <label for="productName">Product Name</label>
+      </div>
+      <div   id="nameErr"  class="alert alert-warning d-none">Product Name Must Start With A Capital Letter</div>
+      <div   id="emptyErr"  class="alert alert-primary d-none">Please Fill Product Name</div>
+
+
+
+      <div class="form-floating mb-3">
+        <input    oninput="productPricValidation()"           type="text" class="form-control" id="productPrice" placeholder="product Price">
+        <label for="productPrice">product Price</label>
+      </div>
+      <div   id="priceErr"  class="alert alert-warning d-none">Product Price Must Be From 10000  To 50000</div>
+      <div   id="emptyErorr"  class="alert alert-primary d-none">Please Fill Product Price</div>
+
+
+
+<div class="form-floating mb-3">
+  <input     oninput="productCatValidation()"     list="list" type="text" class="form-control" id="productCategory" placeholder="Product Category">
+  <label for="productCategory">Product Category</label>
+  <datalist id="list">
+    <option>Phone</option>
+    <option>TV</option>
+    <option>Electronic</option>
+    <option>Tablets</option>
+    <option>Fridges</option>
+  </datalist>
+</div>
+<div   id="productCatErr"  class="alert alert-warning d-none">Product Category Must Be Phone,Electronic,Tablets Or Fridges </div>
+      <div   id="emptyEroor"  class="alert alert-primary d-none">Please Fill Product Category</div>
+
+
+
+<div class="form-floating mb-3">
+    <textarea  oninput="productDesValidation()"    type="text" class="form-control" id="productDesc" placeholder="product Price"> </textarea>
+    <label for="productDesc">Product Description</label>
+  </div>
+  <div   id="productDescErr"  class="alert alert-warning d-none">Product Length Must Be From 10 To 50 Character</div>
+      <div   id="emptyErrrr"  class="alert alert-primary d-none">Please Fill Product Description</div>
+
+
+
+
+  <div class="form-floating mb-3">
+    <input type="file" class="form-control" id="productImage" placeholder="Poduct Image">
+    <label for="productImage">Product Image</label>
+  </div>
+
+  <button   id="addBtn"  onclick="addProduct()" type="button" class="btn btn-outline-success  w-25 ">Add Product</button>
+  <button         id="updateBtn"    onclick="updateProduct()" type="button" class="btn btn-outline-warning  w-25   d-none">Update Product</button>
+
+
+   </div>
+  </div>
+
+
+
+<div class="container  ">
+<div class="w-75  mx-auto">
+  <h2   class="text-center my-4 text-success">Search Product</h2>
+  <div class="form-floating mb-3">
+    <input oninput="searchByProduct()"    type="search" class="form-control" id="searchProduct" placeholder="search Product">
+    <label for="searchProduct">Search Product</label>
+  </div>
+
+
+
+
+
+
+
+  <h2   class="text-center my-4 text-success">Search By Category</h2>
+  <div class="form-floating mb-3">
+    <input oninput="searchingCategory()"    type="search" class="form-control" id="SearchCategory" placeholder="SearchCategory">
+    <label for="SearchCategory">Search Category</label>
+  </div>
+
+
+
+
+
+
+
+  <h2   style="width: 40%;  margin:auto; " class="  text-success   bg-warning text-center  rounded-pill py-3    fw-border  my-5 text-center   by-5">Available Product</h2>
+<div class="row" id="row">
+
+<!-- 
+<div class="col-md-3">
+<img src="/images/proxy-image.jpeg"  class="w-100"    alt="iphone">
+<p>Product Name:</p>
+<p>Product Price:</p>
+<p>Product Category:</p>
+<p>Product Description:</p>
+<button  class="w-100 btn btn-outline-primary my-1">Update</button>
+<button  class="w-100 btn btn-outline-danger my-1">Update</button>
+</div> -->
+
+</div>
+</div>
+</div>
+
+  <script src="./js/bootstrap.bundle.min.js"></script>  
+  <script src="./js/main.js"></script>  
+
+ 
+</body>
+</html>
